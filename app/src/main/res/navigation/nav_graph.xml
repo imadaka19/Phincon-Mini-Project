@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.pokemonapp.ui.fragments.ListFragment"
+        android:label="ListFragment" >
+        <action
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            />
+        <action
+            android:id="@+id/action_listFragment_to_savedViewFragment"
+            app:destination="@id/savedViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.pokemonapp.ui.fragments.DetailFragment"
+        android:label="DetailFragment" />
+    <fragment
+        android:id="@+id/savedViewFragment"
+        android:name="com.example.pokemonapp.ui.fragments.SavedViewFragment"
+        android:label="SavedViewFragment" >
+        <action
+            android:id="@+id/action_savedViewFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+</navigation>
